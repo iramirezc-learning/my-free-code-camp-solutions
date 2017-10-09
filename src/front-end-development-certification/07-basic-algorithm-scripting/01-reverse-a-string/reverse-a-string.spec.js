@@ -1,5 +1,5 @@
 const expect = require('expect.js');
-const reverseString = require('../reverse-a-string');
+const reverseString = require('./reverse-a-string');
 
 describe('Reverse A String Unit Tests:', function () {
   it('should expose a function', function () {

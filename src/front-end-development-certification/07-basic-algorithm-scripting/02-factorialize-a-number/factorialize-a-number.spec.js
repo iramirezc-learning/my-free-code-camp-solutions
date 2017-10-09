@@ -1,5 +1,5 @@
 const expect = require('expect.js');
-const factorialize = require('../factorialize-a-number');
+const factorialize = require('./factorialize-a-number');
 
 const tests = [
   { input: 0, result: 1 },

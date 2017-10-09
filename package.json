@@ -4,7 +4,7 @@
   "description": "My solutions to the [Free Code Camp]([https://www.freecodecamp.org) exercises.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -- src/**/specs/*.spec.js"
+    "test": "mocha -- src/**/*.spec.js"
   },
   "author": "Isaac Ramírez - iramirezc@live.com.mx",
   "license": "ISC",
