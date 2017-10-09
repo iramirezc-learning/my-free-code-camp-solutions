@@ -1,0 +1,15 @@
+{
+  "name": "my-free-code-camp-exercises",
+  "version": "1.0.0",
+  "description": "My solutions to the [Free Code Camp]([https://www.freecodecamp.org) exercises.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -- src/**/specs/*.spec.js"
+  },
+  "author": "Isaac Ramírez - iramirezc@live.com.mx",
+  "license": "ISC",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^4.0.1"
+  }
+}
