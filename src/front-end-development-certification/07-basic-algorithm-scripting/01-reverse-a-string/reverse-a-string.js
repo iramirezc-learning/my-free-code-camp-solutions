@@ -8,4 +8,6 @@ function reverseString(str) {
   return str.split('').reverse().join('');
 };
 
-module.exports = reverseString;
+module.exports = {
+  v1: reverseString,
+};

@@ -13,4 +13,6 @@ function factorialize(num) {
   return factorialize(num - 1) * num;
 }
 
-module.exports = factorialize;
+module.exports = {
+  v1: factorialize,
+};

@@ -17,63 +17,16 @@ const tests = [
 ];
 
 describe('Check For A Palindrome Unit Tests:', function () {
-
-  describe('Testing Version 1:', function () {
-    it('should expose a function', function () {
-      expect(palindrome.v1).to.be.a('function');
-    });
-
-    tests.forEach(({ input, result }) => {
-      it(`should return ${result} for palindrome '${input}'`, function () {
-        expect(palindrome.v1(input)).to.equal(result);
+  Object.keys(palindrome).forEach(version => {
+    describe(`Testing Version ${version}:`, function () {
+      it('should expose a function', function () {
+        expect(palindrome[version]).to.be.a('function');
       });
-    });
-  });
 
-  describe('Testing Version 2:', function () {
-    it('should expose a function', function () {
-      expect(palindrome.v2).to.be.a('function');
-    });
-
-    tests.forEach(({ input, result }) => {
-      it(`should return ${result} for palindrome '${input}'`, function () {
-        expect(palindrome.v2(input)).to.equal(result);
-      });
-    });
-  });
-
-  describe('Testing Version 3:', function () {
-    it('should expose a function', function () {
-      expect(palindrome.v3).to.be.a('function');
-    });
-
-    tests.forEach(({ input, result }) => {
-      it(`should return ${result} for palindrome '${input}'`, function () {
-        expect(palindrome.v3(input)).to.equal(result);
-      });
-    });
-  });
-
-  describe('Testing Version 4:', function () {
-    it('should expose a function', function () {
-      expect(palindrome.v4).to.be.a('function');
-    });
-
-    tests.forEach(({ input, result }) => {
-      it(`should return ${result} for palindrome '${input}'`, function () {
-        expect(palindrome.v4(input)).to.equal(result);
-      });
-    });
-  });
-
-  describe('Testing Version 5:', function () {
-    it('should expose a function', function () {
-      expect(palindrome.v5).to.be.a('function');
-    });
-
-    tests.forEach(({ input, result }) => {
-      it(`should return ${result} for palindrome '${input}'`, function () {
-        expect(palindrome.v5(input)).to.equal(result);
+      tests.forEach(({ input, result }) => {
+        it(`should return ${result} for palindrome '${input}'`, function () {
+          expect(palindrome[version](input)).to.equal(result);
+        });
       });
     });
   });

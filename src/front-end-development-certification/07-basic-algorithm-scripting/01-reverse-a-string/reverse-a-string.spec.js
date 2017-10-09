@@ -1,14 +1,24 @@
 const expect = require('expect.js');
 const reverseString = require('./reverse-a-string');
 
-describe('Reverse A String Unit Tests:', function () {
-  it('should expose a function', function () {
-    expect(reverseString).to.be.a('function');
-  });
+const tests = [
+  { input: 'Hello', result: 'olleH' },
+  { input: '12345', result: '54321' },
+  { input: 'eme', result: 'eme' },
+];
 
-  it('should reverse a string', function () {
-    expect(reverseString('Hello')).to.equal('olleH');
-    expect(reverseString('12345')).to.equal('54321');
-    expect(reverseString('eme')).to.equal('eme');
+describe('Reverse A String Unit Tests:', function () {
+  Object.keys(reverseString).forEach(version => {
+    describe(`Testing Version ${version}:`, function () {
+      it('should expose a function', function () {
+        expect(reverseString[version]).to.be.a('function');
+      });
+
+      tests.forEach(({ input, result }) => {
+        it(`should return '${result}' for string '${input}'`, function () {
+          expect(reverseString[version](input)).to.equal(result);
+        });
+      });
+    });
   });
 });
