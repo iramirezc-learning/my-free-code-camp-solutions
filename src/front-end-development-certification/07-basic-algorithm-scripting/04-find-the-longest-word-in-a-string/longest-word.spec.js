@@ -1,5 +1,5 @@
 const expect = require('expect.js');
-const logestWord = require('./longest-word');
+const longestWord = require('./longest-word');
 
 const tests = [
   { input: '', result: 0 },
@@ -12,15 +12,15 @@ const tests = [
 ];
 
 describe('Find The Longest Word In A String Unit Tests:', function () {
-  Object.keys(logestWord).forEach(version => {
+  Object.keys(longestWord).forEach(version => {
     describe(`Testing Version ${version}:`, function () {
       it('should expose a function', function () {
-        expect(logestWord[version]).to.be.a('function');
+        expect(longestWord[version]).to.be.a('function');
       });
 
       tests.forEach(({ input, result }) => {
         it(`should return ${result} for string '${input}'`, function () {
-          expect(logestWord[version](input)).to.equal(result);
+          expect(longestWord[version](input)).to.equal(result);
         });
       });
     });
