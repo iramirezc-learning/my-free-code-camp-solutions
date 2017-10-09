@@ -19,7 +19,7 @@ describe('Confirm The Ending Unit Tests:', function () {
       });
 
       tests.forEach(({ input, result }) => {
-        it(`should return '${result}' for array '${input}'`, function () {
+        it(`should return '${result}' for string '${input}'`, function () {
           expect(solution[version].apply(null, input)).to.equal(result);
         });
       });
